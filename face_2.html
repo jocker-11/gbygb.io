@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style_1.css">
+    <script>
+        function getRandomNum (min,max)
+        {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var randomX = getRandomNum(-1000,-100);
+        var randomY = getRandomNum(-500, 500);
+
+        console.log('randomX:', randomX);
+        console.log('randomY:', randomY);
+
+        var stylesheet = document.styleSheets[0];
+        var keyframesRule = stylesheet.insertRule('@keyframes character{from{transform: translate(0%,0%);}to{transform: translate(${randomX}%, ${randomY}%);}}',  stylesheet.cssRules.length);
+    </script>
+</head>
+<body>
+    <h1>the face</h1>
+    <div class="character-container">
+        <div class="face">
+            <div class="eyes_1"></div>
+            <div class="eyes_2"></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="body">
+            <div class="decoration"></div>
+            <div class="hand_1"></div>
+            <div class="hand_2"></div>
+            <div class="leg_1"></div>
+            <div class="leg_2"></div>
+            <div class="knee_1">
+                <div class="shoe_1"></div>
+            </div>
+            <div class="knee_2">
+                <div class="shoe_2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

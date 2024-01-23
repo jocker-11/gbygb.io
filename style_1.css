@@ -1,0 +1,245 @@
+
+h1
+{
+    text-align: center;
+    color: black
+}
+.body, .face
+{
+    margin: auto;
+}
+.character-container {
+    margin: auto;
+    position: relative;
+    width: 100px; /* You can adjust this width */
+    height: 150px; /* You can adjust this height */
+    animation: character;
+    animation-duration: 4s;
+    animation-iteration-count: in;
+}
+.face
+{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 60%;
+    background-color:bisque;
+    animation: moveFace 1s infinite;
+}
+.eyes_1, .eyes_2
+{
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    background-color: black;
+}
+.eyes_1
+{
+    top:40%;
+    left: 20%;
+}
+.eyes_2
+{
+    top:40%;
+    left: 60%;
+}
+.mouth
+{
+    position: absolute;
+    background-color:brown;
+    width: 10px;
+    height: 5px;
+    top:60%;
+    left: 45%;
+}
+.body
+{
+    position: relative;
+    width: 50px;
+    height: 70px;
+    background-color: black;
+    top:65%;
+}
+.decoration
+{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    border-color:  aliceblue transparent transparent transparent;
+}
+.hand_1
+{
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    rotate: 300deg;
+    right:100%;
+    top:20%;
+    background-color: black;
+    animation-name: moveHand_1;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+}
+
+.hand_2
+{
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    rotate: -400deg;
+    left: 100%;
+    top:20%;
+    background-color: black;
+    animation-name: moveHand_2;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+}
+.leg_1
+{
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    rotate: -90deg;
+    right:65%;
+    top:110%;
+    background-color: black;
+    animation-name: moveLeg_1;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+.leg_2
+{
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    rotate: 90deg;
+    left: 65%;
+    top:110%;
+    background-color: black;
+    animation-name: moveLeg_2;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+.knee_1
+{
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    rotate: -90deg;
+    right:65%;
+    top:140%;/*140*/ /* 110 */ 
+    background-color: black;
+    animation-name: one;
+    animation-duration: 0.5s;
+    animation-iteration-count:infinite;
+}
+.shoe_1
+{
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    border-radius: 20%;
+    right:80%;
+    top:0%;
+    background-color:red;
+}
+.knee_2
+{
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    rotate: 90deg;
+    left: 65%;
+    top:140%; /*140*/ /* 110 */ 
+    background-color: black;
+    animation-name: two;
+    animation-duration: 0.5s;
+    animation-iteration-count:infinite;
+}
+.shoe_2
+{
+    position: absolute; 
+    width: 5px;
+    height: 10px;
+    border-radius: 20%;
+    left: 80%;
+    top:0%;
+    background-color:red;
+}
+@keyframes moveHand_1
+{
+    0% {
+        transform: rotate(40deg) translate(-5px, 0px);
+    }
+    50% {
+        transform: rotate(120deg) translate(-5px, 0%);
+    }
+    100% {
+        transform: rotate(40deg) translate(-5px, 0px);
+    }
+}
+@keyframes moveHand_2
+{
+    0% {
+        transform: rotate(60deg) translate(5px, 0px);
+    }
+    50% {
+        transform: rotate(-40deg) translate(5px, 0%);
+    }
+    100% {
+        transform: rotate(60deg) translate(5px, 0px);
+    }
+}
+@keyframes one
+{
+    form
+    {
+        transform: translateX(0%);
+    }
+    to 
+    {
+        transform: translateX(-100%);
+    }
+}
+@keyframes two 
+{
+    form
+    {
+        transform: translateX(0%);
+    }
+    to 
+    {
+        transform: translateX(100%);
+    }
+}
+@keyframes moveLeg_1
+{
+    form
+    {
+        transform: translateX(0%);
+    }
+    to
+    {
+        transform: translateX(-50%);
+    }
+}
+@keyframes moveLeg_2
+{
+    form
+    {
+        transform: translateX(0%);
+    }
+    to
+    {
+
+        transform: translateX(50%);
+    }
+}
+@keyframes moveFace
+{
+    to
+    {
+        transform: translateY(-20%);
+    }
+}
