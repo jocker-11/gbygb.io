@@ -6,18 +6,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style_1.css">
     <script>
-        function getRandomNum (min,max)
-        {
+        function getRandomNum(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
-        var randomX = getRandomNum(-1000,-100);
-        var randomY = getRandomNum(-500, 500);
+        var X, Y;
+        function updateRandomValues() 
+        {
+            let newRandomX, newRandomY;
 
-        console.log('randomX:', randomX);
-        console.log('randomY:', randomY);
+            do {
+                newRandomX = getRandomNum(-500, 500);
+                newRandomY = getRandomNum(-500, 500);
+            } while (newRandomX === X && newRandomY === Y);
 
-        var stylesheet = document.styleSheets[0];
-        var keyframesRule = stylesheet.insertRule('@keyframes character{from{transform: translate(0%,0%);}to{transform: translate(${randomX}%, ${randomY}%);}}',  stylesheet.cssRules.length);
+            document.documentElement.style.setProperty('--randomX', `${newRandomX}%`);
+            document.documentElement.style.setProperty('--randomY', `${newRandomY}%`);
+
+            X = newRandomX;
+            Y = newRandomY;
+
+        }
+
+        updateRandomValues();
+        
+        document.querySelector('.character-container').addEventListener('animationiteration', function() {
+            updateRandomValues();
+        });
     </script>
 </head>
 <body>
