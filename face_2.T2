@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style_1.css">
+    <script>
+        function getRandomNum(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        // var X, Y;
+        function updateRandomValues() 
+        {
+            let newRandomX, newRandomY;
+
+            // do {
+                
+            // } while (newRandomX === X && newRandomY === Y);
+
+            newRandomX = getRandomNum(-500, 500);
+            newRandomY = getRandomNum(-500, 500);
+            console.log('newRandomX：',newRandomX);
+            console.log('newRandomY：',newRandomY);
+            document.documentElement.style.setProperty('--randomX', `${newRandomX}%`);
+            document.documentElement.style.setProperty('--randomY', `${newRandomY}%`);
+            // X = newRandomX;
+            // Y = newRandomY;
+
+        }
+        updateRandomValues();
+        
+        function updateRandomValues_1()
+        {
+            newRandomX_1 = getRandomNum(-400, 500);
+            newRandomY_1 = getRandomNum(-300, 500);
+            document.documentElement.style.setProperty('--randomX_1', `${newRandomX_1}%`);
+            document.documentElement.style.setProperty('--randomY_1', `${newRandomY_1}%`);
+            console.log('newRandomX_1：', newRandomX_1);
+            console.log('newRandomY_1：', newRandom_1);
+        }
+
+        updateRandomValues_1();
+        
+        
+        // document.querySelector('.character-container').addEventListener('animationiteration', function() {
+        //     updateRandomValues();
+        // });
+
+        // document.querySelector('.character-container_1').addEventListener('animationiteration', function() {
+        //     updateRandomValues_1();
+        // });
+    </script>
+</head>
+<body>
+    <h1>the face</h1>
+    <div class="character-container character-container_1">
+        <div class="face">
+            <div class="eyes_1"></div>
+            <div class="eyes_2"></div>
+            <div class="mouth"></div>
+        </div>
+        <div class="body">
+            <div class="decoration"></div>
+            <div class="hand_1"></div>
+            <div class="hand_2"></div>
+            <div class="leg_1"></div>
+            <div class="leg_2"></div>
+            <div class="knee_1">
+                <div class="shoe_1"></div>
+            </div>
+            <div class="knee_2">
+                <div class="shoe_2"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
